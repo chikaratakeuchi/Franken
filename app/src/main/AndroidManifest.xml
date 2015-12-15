@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activity01"
+            android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@style/FullscreenTheme">
@@ -23,13 +23,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activity02">
-
-        </activity>
-
-        <activity android:name=".Activity03">
-
-        </activity>
+        <activity android:name=".Activity02"></activity>
+        <activity android:name=".Activity03"></activity>
+        <activity android:name=".Activity04"></activity>
+        <activity android:name=".Activity05"></activity>
+        <activity android:name=".Activity06"></activity>
+        <activity android:name=".Activity07"></activity>
+        <activity android:name=".Activity08"></activity>
+        <activity android:name=".Activity09"></activity>
+        <activity android:name=".Activity10"></activity>
     </application>
 
 </manifest>
