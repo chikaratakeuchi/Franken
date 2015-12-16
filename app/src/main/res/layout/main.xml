@@ -13,10 +13,10 @@
         android:layout_gravity="center_horizontal"
         android:textColor="#ffffff"
         android:gravity="center_horizontal"
+        android:textSize="20sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="66dp"
-        android:textSize="20sp" />
+        android:layout_marginTop="150dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -26,7 +26,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:text="https://jedi.imodeip3.nttdocomo.co.jp/provider/uiux/"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,31 +36,42 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="フォルダを選択"
         android:id="@+id/textView2"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
         android:textColor="#ffffff"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/textView3" />
 
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spinner"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="実行"
         android:id="@+id/button"
-        android:layout_marginTop="91dp"
         android:background="#325a95"
         android:textColor="#ffffff"
-        android:layout_below="@+id/spinner"
-        android:layout_centerHorizontal="true"
         android:textSize="20sp"
-        android:singleLine="false" />
+        android:singleLine="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Franken"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:layout_marginTop="50px" />
 </RelativeLayout>
