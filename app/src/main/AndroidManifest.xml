@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Activity01"></activity>
         <activity android:name=".Activity02"></activity>
         <activity android:name=".Activity03"></activity>
         <activity android:name=".Activity04"></activity>
