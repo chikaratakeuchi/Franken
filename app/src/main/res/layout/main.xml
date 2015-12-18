@@ -38,9 +38,9 @@
         android:id="@+id/textView2"
         android:textColor="#ffffff"
         android:textSize="20sp"
+        android:layout_marginTop="48dp"
         android:layout_below="@+id/editText"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_marginTop="62dp" />
+        android:layout_alignStart="@+id/textView3" />
 
     <Spinner
         android:layout_width="match_parent"

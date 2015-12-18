@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -71,6 +73,12 @@ public class MainActivity extends Activity {
         setUiOperation();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setSpinner();
+    }
+
     private void downloadFiles() {
         //task.execute(spinner.getSelectedItem().toString());
         AsyncHttpRequest task = new AsyncHttpRequest(this);
@@ -95,8 +103,20 @@ public class MainActivity extends Activity {
             reader.close();
             editText.setText(url);
         }catch( IOException e ){
-            editText.setText("");
+            editText.setText("https://jedi.imodeip3.nttdocomo.co.jp/provider/uiux/prototype/franken.php");
         }
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ((TextView)parent.getChildAt(0)).setTextColor(Color.WHITE);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         //editText.addTextChangedListener(watchHandler);
         editText.setOnKeyListener(new View.OnKeyListener() {
@@ -173,7 +193,7 @@ public class MainActivity extends Activity {
                 reader.close();
                 //Log.d("EVENT","url data saved");
             }catch( IOException e ){
-                url = "https://jedi.imodeip3.nttdocomo.co.jp/provider/uiux/takeuchi/prototype/franken.php";
+                url = "https://jedi.imodeip3.nttdocomo.co.jp/provider/uiux/prototype/franken.php";
                 e.printStackTrace();
             }
             String requestJSON = "{\"param\":\"" + params[0] + "\"}";
